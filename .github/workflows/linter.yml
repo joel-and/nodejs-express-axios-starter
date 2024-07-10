@@ -19,5 +19,9 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           cache: maven
-      - name: Linter
-        run: npm run linter
+
+        - name: Install dependencies
+          run: npm install
+      
+        - name: Linter
+          run: npm run linter
